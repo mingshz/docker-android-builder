@@ -9,7 +9,8 @@ RUN /usr/local/rvm/bin/rvm install 2.6.3
 RUN /usr/local/rvm/bin/rvm use 2.6.3
 ENV PATH="/usr/local/rvm/gems/ruby-2.6.3/bin:/usr/local/rvm/gems/ruby-2.6.3@global/bin:/usr/local/rvm/rubies/ruby-2.6.3/bin:${PATH}"
 RUN ruby -v
-RUN gem install bundler
+# RUN gem install bundler
+RUN bundle -v
 
 # Clean up apt-get
 RUN rm -rf /var/lib/apt/lists/*
