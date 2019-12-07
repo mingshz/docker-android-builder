@@ -7,6 +7,7 @@ RUN gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A
 RUN curl -sSL https://get.rvm.io | bash -s stable
 RUN /usr/local/rvm/bin/rvm install 2.6.3
 RUN /usr/local/rvm/bin/rvm use 2.6.3
+ENV PATH="/usr/local/rvm/gems/ruby-2.6.3/bin:/usr/local/rvm/gems/ruby-2.6.3@global/bin:/usr/local/rvm/rubies/ruby-2.6.3/bin:${PATH}"
 RUN ruby -v
 RUN gem install bundler
 
